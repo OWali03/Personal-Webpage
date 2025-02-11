@@ -1,13 +1,66 @@
 <script lang="ts" setup>
+import { ref } from 'vue';
+
+const isSidebarOpen = ref(false);
+
+// Toggle sidebar visibility
+const toggleSidebar = () => {
+  isSidebarOpen.value = !isSidebarOpen.value;
+};
+
+// Close sidebar when mouse leaves
+const closeSidebar = () => {
+  isSidebarOpen.value = false;
+};
 </script>
 
-
 <template>
-  <div>
-    <nav class="bg-gray-800 p-4 text-white flex gap-4">
-      <router-link to="/" class="hover:text-blue-400">Home</router-link>
-      <router-link to="/about" class="hover:text-blue-400">About</router-link>
-    </nav>
-    <router-view></router-view>
+  <div class="flex min-h-screen bg-gray-100">
+    <!-- Sidebar -->
+    <div
+        class="flex flex-col bg-gray-800 text-white transition-all duration-300 ease-in-out"
+        :class="{ 'w-48': isSidebarOpen, 'w-12': !isSidebarOpen }"
+        @mouseleave="closeSidebar"
+    >
+      <!-- Hamburger Icon (Toggles Sidebar) -->
+      <div
+          class="p-4 flex justify-center items-center cursor-pointer hover:bg-gray-700 transition duration-300"
+          @click="toggleSidebar"
+      >
+        <div class="space-y-1.5">
+          <div class="w-6 h-0.5 bg-white"></div>
+          <div class="w-6 h-0.5 bg-white"></div>
+          <div class="w-6 h-0.5 bg-white"></div>
+        </div>
+      </div>
+
+      <!-- Sidebar Navigation (Visible Only When Sidebar is Open) -->
+      <nav
+          v-if="isSidebarOpen"
+          class="flex flex-col gap-4 p-4"
+      >
+        <router-link
+            to="/"
+            class="py-2 px-4 rounded-md transition duration-300"
+            active-class="bg-blue-800 text-white"
+            :class="{ 'hover:bg-blue-400': $route.path !== '/' }"
+        >
+          Home
+        </router-link>
+        <router-link
+            to="/about"
+            class="py-2 px-4 rounded-md transition duration-300"
+            active-class="bg-blue-800 text-white"
+            :class="{ 'hover:bg-blue-400': $route.path !== '/about' }"
+        >
+          About
+        </router-link>
+      </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-1 p-6 transition-all duration-300 ease-in-out">
+      <router-view></router-view>
+    </main>
   </div>
 </template>
