@@ -3,12 +3,10 @@ import { ref } from 'vue';
 
 const isSidebarOpen = ref(false);
 
-// Toggle sidebar visibility
 const toggleSidebar = () => {
   isSidebarOpen.value = !isSidebarOpen.value;
 };
 
-// Close sidebar when mouse leaves
 const closeSidebar = () => {
   isSidebarOpen.value = false;
 };
@@ -16,13 +14,11 @@ const closeSidebar = () => {
 
 <template>
   <div class="flex min-h-screen bg-gray-100">
-    <!-- Sidebar -->
     <div
         class="flex flex-col bg-gray-800 text-white transition-all duration-300 ease-in-out"
         :class="{ 'w-48': isSidebarOpen, 'w-12': !isSidebarOpen }"
         @mouseleave="closeSidebar"
     >
-      <!-- Hamburger Icon (Toggles Sidebar) -->
       <div
           class="p-4 flex justify-center items-center cursor-pointer hover:bg-gray-700 transition duration-300"
           @click="toggleSidebar"
@@ -34,7 +30,6 @@ const closeSidebar = () => {
         </div>
       </div>
 
-      <!-- Sidebar Navigation (Visible Only When Sidebar is Open) -->
       <nav
           v-if="isSidebarOpen"
           class="flex flex-col gap-4 p-4"
@@ -58,7 +53,6 @@ const closeSidebar = () => {
       </nav>
     </div>
 
-    <!-- Main Content -->
     <main class="flex-1 p-6 transition-all duration-300 ease-in-out">
       <router-view></router-view>
     </main>
