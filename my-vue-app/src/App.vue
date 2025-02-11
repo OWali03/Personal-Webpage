@@ -42,16 +42,16 @@ const closeSidebar = () => {
         <router-link
             to="/"
             class="py-2 px-4 rounded-md transition duration-300"
-            active-class="bg-blue-800 text-white"
-            :class="{ 'hover:bg-blue-400': $route.path !== '/' }"
+            active-class="bg-gray-700 text-white"
+            :class="{ 'hover:bg-gray-500': $route.path !== '/' }"
         >
           Home
         </router-link>
         <router-link
             to="/about"
             class="py-2 px-4 rounded-md transition duration-300"
-            active-class="bg-blue-800 text-white"
-            :class="{ 'hover:bg-blue-400': $route.path !== '/about' }"
+            active-class="bg-gray-700 text-white"
+            :class="{ 'hover:bg-gray-500': $route.path !== '/about' }"
         >
           About
         </router-link>
