@@ -1,12 +1,7 @@
 <script lang="ts" setup>
-import { ref, computed } from 'vue';
-import { useRoute } from 'vue-router';
+import { ref } from 'vue';
 
-const route = useRoute();
 const isSidebarOpen = ref(false);
-
-// Hide sidebar on password gate page
-const showSidebar = computed(() => route.path !== '/private');
 
 const toggleSidebar = () => {
   isSidebarOpen.value = !isSidebarOpen.value;
@@ -20,7 +15,6 @@ const closeSidebar = () => {
 <template>
   <div class="flex min-h-screen bg-gray-100">
     <div
-        v-if="showSidebar"
         class="flex flex-col bg-gray-800 text-white transition-all duration-300 ease-in-out"
         :class="{ 'w-48': isSidebarOpen, 'w-12': !isSidebarOpen }"
         @mouseleave="closeSidebar"
@@ -56,18 +50,10 @@ const closeSidebar = () => {
         >
           About
         </router-link>
-        <router-link
-            to="/private"
-            class="py-2 px-4 rounded-md transition duration-300"
-            active-class="bg-gray-700 text-white"
-            :class="{ 'hover:bg-gray-500': $route.path !== '/private' }"
-        >
-          Private
-        </router-link>
       </nav>
     </div>
 
-    <main :class="showSidebar ? 'flex-1 p-6 transition-all duration-300 ease-in-out' : 'w-full'">
+    <main class="flex-1 p-6 transition-all duration-300 ease-in-out">
       <router-view></router-view>
     </main>
   </div>
