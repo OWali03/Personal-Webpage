@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Omar Wali — Full-Stack Developer</title>
+  <meta name="description" content="Omar Wali is a full-stack developer building fast, beautiful web experiences for ambitious companies. Marketing sites, web applications, APIs — end to end." />
+
+  <meta property="og:title" content="Omar Wali — Full-Stack Developer" />
+  <meta property="og:description" content="I build fast, beautiful web experiences for ambitious companies." />
+  <meta property="og:type" content="website" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/ogl@1.0.5/+esm" />
+  <script type="module" src="background.js"></script>
+  <script src="main.js" defer></script>
+</head>
+<body>
+
+  <canvas id="gl" aria-hidden="true"></canvas>
+
+  <header class="nav" id="nav">
+    <a class="nav-logo" href="#hero">Omar Wali</a>
+
+    <nav class="nav-links" id="nav-links" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero" aria-label="Introduction">
+      <div class="container hero-inner">
+        <h1 class="hero-title">
+          <span class="hero-line">
+            <span class="word" style="--i:0"><span>Omar</span></span>
+            <span class="word" style="--i:1"><span>Wali</span></span>
+          </span>
+          <span class="hero-line hero-line-sub">
+            <span class="word" style="--i:2"><span>Full-Stack</span></span>
+            <span class="word" style="--i:3"><span>Developer</span></span>
+          </span>
+        </h1>
+
+        <p class="hero-subline">I build fast, beautiful web experiences for&nbsp;ambitious&nbsp;companies.</p>
+
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#projects">See My Work</a>
+          <a class="btn btn-ghost" href="#services">Work With Me</a>
+        </div>
+      </div>
+
+      <a class="scroll-hint" href="#about" aria-label="Scroll to about section">
+        <span class="scroll-hint-track"><span class="scroll-hint-dot"></span></span>
+      </a>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section about" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <p class="section-kicker" data-reveal>About</p>
+        <div class="about-grid">
+          <div class="about-bio" data-reveal>
+            <h2 class="section-title" id="about-heading">Software that earns its&nbsp;keep.</h2>
+            <p>
+              I'm a full-stack developer who works with companies the way a good
+              contractor works on a house — I care about the parts you'll never see.
+              Clean architecture, honest performance budgets, and interfaces that feel
+              inevitable rather than decorated.
+            </p>
+            <p>
+              I take projects from first sketch to production: frontend, backend,
+              database, deployment. One person, the whole stack, no hand-offs where
+              quality goes to die.
+            </p>
+          </div>
+
+          <dl class="about-stats">
+            <div class="stat" data-reveal style="--d:0">
+              <dt>5+ Years</dt>
+              <dd>Shipping production software</dd>
+            </div>
+            <div class="stat" data-reveal style="--d:1">
+              <dt>Vue · React · TypeScript</dt>
+              <dd>Frontend craft</dd>
+            </div>
+            <div class="stat" data-reveal style="--d:2">
+              <dt>Node · Java · Spring</dt>
+              <dd>Backend depth</dd>
+            </div>
+            <div class="stat" data-reveal style="--d:3">
+              <dt>End-to-end</dt>
+              <dd>Design through deployment</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section projects" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <p class="section-kicker" data-reveal>Selected Work</p>
+        <h2 class="section-title" id="projects-heading" data-reveal>Projects</h2>
+
+        <div class="project-grid">
+          <article class="project-card" data-reveal style="--d:0">
+            <h3>Project 01</h3>
+            <p>Case study in preparation — a detailed breakdown of the build, the decisions, and the results will live here.</p>
+            <ul class="tags" aria-label="Status">
+              <li>Coming Soon</li>
+            </ul>
+          </article>
+
+          <article class="project-card" data-reveal style="--d:1">
+            <h3>Project 02</h3>
+            <p>Reserved for an upcoming write-up of recent work, from first sketch to production.</p>
+            <ul class="tags" aria-label="Status">
+              <li>Coming Soon</li>
+            </ul>
+          </article>
+
+          <article class="project-card" data-reveal style="--d:2">
+            <h3>Project 03</h3>
+            <p>This spot is waiting for the right project. It could be yours — tell me what you're building.</p>
+            <ul class="tags" aria-label="Status">
+              <li>Open For Work</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="section services" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <p class="section-kicker" data-reveal>Let's Build Something</p>
+        <h2 class="section-title" id="services-heading" data-reveal>Need a website that actually&nbsp;performs?</h2>
+
+        <div class="service-row">
+          <div class="service" data-reveal style="--d:0">
+            <h3>Marketing Sites</h3>
+            <p>Launch pages and brand sites that load instantly and convert. Built for Core Web Vitals, search, and painless content updates.</p>
+          </div>
+          <div class="service" data-reveal style="--d:1">
+            <h3>Web Applications</h3>
+            <p>Dashboards, portals, and SaaS products built end to end. Typed, tested, and architected to grow with your roadmap.</p>
+          </div>
+          <div class="service" data-reveal style="--d:2">
+            <h3>API &amp; Backend</h3>
+            <p>REST and event-driven services that stay fast under load. Clean contracts, real monitoring, and databases that scale.</p>
+          </div>
+        </div>
+
+        <div class="services-cta" data-reveal>
+          <a class="btn btn-primary" href="#contact">Get in Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact" aria-labelledby="contact-heading">
+      <div class="container">
+        <h2 class="contact-title" id="contact-heading" data-reveal>Let's talk.</h2>
+        <a class="contact-email" href="mailto:omarwali030303@gmail.com" data-reveal>omarwali030303@gmail.com</a>
+        <ul class="contact-links" data-reveal>
+          <li><a href="https://github.com/OWali03" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/omar-wali-6aa797212" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="Omar_Wali_Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Omar Wali</p>
+      <p>Designed &amp; built by hand.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

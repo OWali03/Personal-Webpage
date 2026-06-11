@@ -1,20 +1,15 @@
 {
   "name": "personal-webpage",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "2.0.0",
+  "description": "Personal site of Omar Wali — full-stack developer. Static HTML/CSS/JS with an OGL WebGL background.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "python3 -m http.server 3000"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/OWali03/Personal-Webpage.git"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Omar Wali",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/OWali03/Personal-Webpage/issues"
-  },
-  "homepage": "https://github.com/OWali03/Personal-Webpage#readme",
-  "description": ""
+  "homepage": "https://github.com/OWali03/Personal-Webpage#readme"
 }
