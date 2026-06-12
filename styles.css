@@ -571,9 +571,16 @@ body.menu-open .nav-toggle span:last-child {
   line-height: 1.1;
 }
 
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 40px;
+}
+
 .contact-email {
   display: inline-block;
-  margin-top: 40px;
   font-size: clamp(17px, 2.2vw, 24px);
   letter-spacing: 0.01em;
   border-bottom: 1px solid var(--hairline);
