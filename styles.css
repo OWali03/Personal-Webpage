@@ -147,7 +147,8 @@ section[id] {
   font-weight: 500;
   letter-spacing: 0.04em;
   color: var(--ink-dim);
-  transition: color 0.25s ease;
+  cursor: pointer;
+  transition: color 0.2s ease;
   position: relative;
   padding-block: 8px;
 }
@@ -214,8 +215,9 @@ body.menu-open .nav-toggle span:last-child {
   letter-spacing: 0.03em;
   padding: 16px 32px;
   border: 1px solid transparent;
-  transition: background-color 0.3s ease, border-color 0.3s ease,
-    color 0.3s ease, transform 0.3s var(--ease-out);
+  cursor: pointer;
+  transition: background-color 0.25s ease, border-color 0.25s ease,
+    color 0.25s ease, transform 0.25s var(--ease-out);
 }
 
 .btn-primary {
@@ -473,14 +475,16 @@ body.menu-open .nav-toggle span:last-child {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  transition: transform 0.4s var(--ease-out), border-color 0.4s ease,
-    background-color 0.4s ease;
+  cursor: pointer;
+  transition: transform 0.25s var(--ease-out), border-color 0.25s ease,
+    background-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
   border-color: var(--accent-dim);
   background: rgba(240, 238, 233, 0.04);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
 }
 
 .project-card h3 {
@@ -574,7 +578,8 @@ body.menu-open .nav-toggle span:last-child {
   letter-spacing: 0.01em;
   border-bottom: 1px solid var(--hairline);
   padding-bottom: 8px;
-  transition: color 0.3s ease, border-color 0.3s ease;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
 }
 
 .contact-email:hover,
@@ -597,7 +602,8 @@ body.menu-open .nav-toggle span:last-child {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--ink-dim);
-  transition: color 0.25s ease;
+  cursor: pointer;
+  transition: color 0.2s ease;
 }
 
 .contact-links a:hover,
@@ -614,7 +620,7 @@ body.menu-open .nav-toggle span:last-child {
 
 .footer-inner {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 16px;
   font-size: 13px;
   color: var(--ink-faint);
