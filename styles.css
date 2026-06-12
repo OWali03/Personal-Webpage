@@ -588,26 +588,18 @@ body.menu-open .nav-toggle span:last-child {
   border-color: var(--accent);
 }
 
-.contact-links {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 56px;
-}
-
-.contact-links a {
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+.contact-phone {
+  display: inline-block;
+  margin-top: 24px;
+  font-size: clamp(15px, 1.8vw, 20px);
+  letter-spacing: 0.06em;
   color: var(--ink-dim);
   cursor: pointer;
   transition: color 0.2s ease;
 }
 
-.contact-links a:hover,
-.contact-links a:focus-visible {
+.contact-phone:hover,
+.contact-phone:focus-visible {
   color: var(--accent);
 }
 
